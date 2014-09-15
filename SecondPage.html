@@ -1,0 +1,47 @@
+<!doctype html>
+<head>
+	  <!-- L22 onwards -->
+    <title>My First Webpage</title>
+
+    <meta charset="utf-8" />
+    <!-- Tells us what type of content it is -->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <!-- specifies the view, it s saying make the view according to the width of device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+	<div>
+		<form>
+			 <!-- Simplest form which is input type-->
+			 <!-- Simplest form which is input type with attribute "value" which doesn't disappear when you click in the text box-->
+			 <input type="text" value="example">
+			 <!-- Simplest form which is input type with attribute "placeholder" which disappears when you click in the text box or doesn't require deletion. possible types can be type = "email"-->
+			 <input type="text" placeholder="type here"/>
+
+			 <input type="text" value="example" name = "email">
+			 <br/><br/>
+			 <!-- larger text is done by "textarea" tag-->
+			 <textarea>name = "textarea"</textarea>
+			 <br/><br/>
+			 <!-- Drop down menu declaration-->
+			 <select>
+			 	<option> Select an option </option>
+			 	<option>1</option>
+			 	<option>2</option>
+			 	<option>3</option>
+			 </select>	
+			 <br/><br/>
+			 <!-- radio buttons by setting type="radio" since we only want one of the radio buttons to be selected at a time so we give them name attribute. This would only let you select one button-->
+			 <input type = "radio" name = "color" /> Red
+			  <input type = "radio" name = "color" /> Green
+			  <br/><br/>
+			  <input type="checkbox" name = "animal" value = "1"/>Dog
+			  <input type="checkbox"name = "animal"/>Cat
+			  <input type="checkbox" name = "animal" />Fish
+			  <br/><br/>
+			  <input type="submit" value="Click Me"/>
+			  <!-- When you hit submit button you send the info in the forms using get method-->
+		</form>
+
+	</div>
+  </body>
