@@ -1,3 +1,7 @@
+<!--  Usually pages are divided into head area, text area, and fotter 
+area. div tag is division tag, we can even have sub div tags. so
+basically divide content in logical way-->
+
 
 <!doctype html>
 <html>
@@ -7,16 +11,57 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <!-- so what if we would want to make different paragraphs with different styles we would have to classify each paragraph in different class or ids. Class may refer to more then one elements , but ids refer to one/single element i.e which would appear once for one element..
+  -->
+ <!-- large referes to the class and we use a dot(.) in front of a class in css-->
+<!-- green referes to the id and we use a dot(#) in front of a id in css we can also apply id to a class-->
+<!--divs are always rectangular and covers the area around them they can also be used to control the sections look in css div -->
 
+<style type="text/css">
+.large {
+    font-size:300%;
+}
+#green{
+    color: green;
+}
+.underline{
+    text-decoration: underline;
+}
+.bold{
+    font-weight: bold;
+}
+div {
+    background-color: blue;
+    width: 100px;
+    height: 300px;
+}
+.bluebox{
+        background-color: yellow;
+    width: 200px;
+    height: 100px;
+}
+.redbox{
+    background-color: red;
+    width: 300px;
+    height: 100px;
+}
+</style>
 </head>
+
 <body>
-<div>
-    <h1>Example Domain</h1>
-    <!-- In line CSS -->
-    <!--to use inline css we give a style option in the tags, putting font-size as  200% imakes the size twice. However this is not a good idea because we want to keep our code simple. we can achieve the same by doing internal css which is css in same HTML page. -->
-    <p style="color:blue;font-size:200%">This domain is established to be used for illustrative examples in documents. You may use this
-    domain in examples without prior coordination or asking for permission.</p>
-    <p><a href="http://www.iana.org/domains/example">More information...</a></p>
-</div>
+      <!--  Divs can have class-->
+    <div>
+        <p class="large bold">This is some test</p>
+    </div>
+    <div class="bluebox">
+    <p class="large"> This is some more text.</p>
+    <p class="large"> This is some more text.</p>
+    </div>
+    <div class = "redbox">   <!--  we can also apply id to a class-->
+    <p id="green" class = "large"> This is some more text.</p>
+    </div>
+ 
+    <!--  we want to underline the third word in this paragraph  so we will use span and we will give it one or moreclass-->
+    <p class="large"> This thrid <span class="underline large">word</span> in this paragraph is underlined.</p>
 </body>
 </html>
