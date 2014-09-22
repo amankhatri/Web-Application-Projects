@@ -1,0 +1,85 @@
+<!--  Usually pages are divided into head area, text area, and fotter 
+area. div tag is division tag, we can even have sub div tags. so
+basically divide content in logical way-->
+
+
+<!doctype html>
+<html>
+<head>
+    <title>Learning CSS</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <!-- so what if we would want to make different paragraphs with different styles we would have to classify each paragraph in different class or ids. Class may refer to more then one elements , but ids refer to one/single element i.e which would appear once for one element..
+  -->
+ <!-- large referes to the class and we use a dot(.) in front of a class in css-->
+<!-- green referes to the id and we use a dot(#) in front of a id in css we can also apply id to a class-->
+<!--divs are always rectangular and covers the area around them they can also be used to control the sections look in css div -->
+<!-- HTML Color Codes html-color-codes.info example in puplebox class html code = #FF00FF-->
+<!-- Now we can use float to change the positioning of contents
+so here we have moved puplebox to the left of all the other content 
+on the page and green box to the right (alligned right). Anything 
+which doesn't have float will be in between right float and left float. now since floatleft class occurs after puplebox, the content of <p> with floatleft class would occur right to the puplebox, and left to the greenbox.-->
+<!-- now there are divs which we want to appear underneath the floating div these are special divs for example div class="clear", the only purposes of that div is to sit there and break the div.clear:both. we can also use clear left clear right-->
+
+
+<style type="text/css">
+.large {
+    font-size:300%;
+}
+#green{
+    color: green;
+}
+.underline{
+    text-decoration: underline;
+}
+.bold{
+    font-weight: bold;
+}
+div {
+    background-color: blue;
+    width: 100px;
+    height: 300px;
+}
+.purplebox{
+    background-color: #FF00FF;
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+.greenbox{
+    background-color: green;
+    width: 300px;
+    height: 100px;
+    float: right;
+}
+.floatleft {
+    float:left;
+}
+.clear {
+    clear:both;
+}
+</style>
+</head>
+
+<body>
+      <!--  Divs can have class-->
+    <div>
+        <p class="large bold">This is some test</p>
+    </div>
+    <div class="purplebox">
+    <p class="large"> This is some more text.</p>
+    <p class="large"> This is some more text.</p>
+    </div>
+    <div class = "greenbox">   <!--  we can also apply id to a class-->
+    <p id="green" class = "large"> This is some more text.</p>
+    </div>
+ 
+    <!--  we want to underline the third word in this paragraph  so we will use span and we will give it one or moreclass-->
+    <p class="floatleft"> This thrid <span class="underline large">word</span> in this paragraph is underlined.</p>
+    <div class="clear"></div>
+    <p>undeneath all the floats</p>
+
+</body>
+</html>
