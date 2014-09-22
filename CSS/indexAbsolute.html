@@ -1,0 +1,76 @@
+<!--  Usually pages are divided into head area, text area, and fotter 
+area. div tag is division tag, we can even have sub div tags. so
+basically divide content in logical way-->
+
+
+<!doctype html>
+<html>
+<head>
+    <title>Learning CSS</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <!-- so what if we would want to make different paragraphs with different styles we would have to classify each paragraph in different class or ids. Class may refer to more then one elements , but ids refer to one/single element i.e which would appear once for one element..
+  -->
+ <!-- large referes to the class and we use a dot(.) in front of a class in css-->
+<!-- green referes to the id and we use a dot(#) in front of a id in css we can also apply id to a class-->
+<!--divs are always rectangular and covers the area around them they can also be used to control the sections look in css div -->
+<!-- HTML Color Codes html-color-codes.info example in puplebox class html code = #FF00FF-->
+<!--  position: relative; I am move the puple box relatively left or right for example purposes we will say position: relative;left:100px;, even if we want it to move it to right because we are setting a margin of 100px on the left. when we move things with position we can move things on top of each other. to put one div or any element on top of another or underneath to another we use z-index. One with the lager z index moves up. we always have to have position for z-indedex to work. we can also specify negative magin -->
+<!-- position absolute would move things to where the class with the position absolute will be ignored by all the other classes during the positioning. -->
+
+<style type="text/css">
+.large {
+    font-size:300%;
+}
+#green{
+    color: green;
+}
+.underline{
+    text-decoration: underline;
+}
+.bold{
+    font-weight: bold;
+}
+div {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+}
+.purplebox{
+    background-color: #FF00FF;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 100px;
+    top: -50px;
+    z-index:1;
+}
+.greenbox{
+    background-color: green;
+    width: 300px;
+    height: 100px;
+}
+</style>
+</head>
+
+<body>
+      <!--  Divs can have class-->
+    <div>
+        <p class="large bold">This is some test</p>
+    </div>
+    <div class="purplebox">
+    <p class="large"> This is some more text.</p>
+    <p class="large"> This is some more text.</p>
+    </div>
+    <div class = "greenbox">   <!--  we can also apply id to a class-->
+    <p id="green" class = "large"> This is some more text.</p>
+    </div>
+ 
+    <!--  we want to underline the third word in this paragraph  so we will use span and we will give it one or moreclass-->
+    <p> This thrid <span class="underline large">word</span> in this paragraph is underlined.</p>
+  
+
+</body>
+</html>
