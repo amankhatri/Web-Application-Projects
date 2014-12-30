@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning CSS</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <! -- Use ids only once just for one specific thing starts with # -->
+    <!-- span tag when you have to deal with specific part of sentence, it can have a class  -->
+    <!-- there are divs on divs we really can allign divs right next to each other using float -->
+     <style type="text/css">
+     .large {font-size: 200%}
+     #green {background-color: green}
+     .underline {text-decoration: underline;}
+     .bold {font-weight: bold;}
+     .purplebox {
+        background-color:  #800080;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+        padding:10px;
+   
+     }
+    .greenbox{
+        background-color: #008000;
+        width: 300px;
+        height: 200px;
+        z-index: 1;
+    }
+    p {
+        padding: 0px;
+        margin: 0px;
+    }
+     
+    </style>  
+</head>
+<!-- padding: it is very similar to margin, instead of moving the entire div it moves the text inside the div. Also if we look at the page we know that there is too much distance in the text inside the div tag that is because of p tag , it has padding inbuilt so we would have to set the padding and margin of the p tag to be zero. you can do padding : top right bottom left , and if you only give two out of 4 paddings it will repeat the padding  . you can also do padding-left: leftpx; padding-right: rightpx and etc-->
+<body>
+    <!-- divs are always rectangles and contols the layout  of section-->
+    <div class = "purplebox">
+            <p class = "large"> This is some text.</p>
+    </div>
+    <div class = "greenbox">
+            <p id = "green" class= "large"> This is some more text </p>
+    </div>  
+    <p> The Third <span class="underline large bold"> word </span> in this paragraph "word"  is underlined large and bold</p>
+</body>
+</html>
