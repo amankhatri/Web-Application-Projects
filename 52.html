@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning CSS</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <! -- Use ids only once just for one specific thing starts with # -->
+    <!-- span tag when you have to deal with specific part of sentence, it can have a class  -->
+    <!-- there are divs on divs we really can allign divs right next to each other using float -->
+     <style type="text/css">
+     .large {font-size: 200%}
+     #green {background-color: green}
+     .underline {text-decoration: underline;}
+     .bold {font-weight: bold;}
+     .purplebox {
+        background-color:  #800080;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+        margin-left: 400px;
+   
+     }
+    .greenbox{
+        background-color: #008000;
+        width: 300px;
+        height: 200px;
+        z-index: 1;
+    }
+     
+    </style>  
+</head>
+<!-- Margins move the divs right or left, down or up and we want everything beneath purple box flow accordingly
+when we have just Margin as an attribute of a class, it creates a margin all around the class or the div of the specified value
+we can specify the margin to be different on top bottom left and right  margin: toppx rightpx bottompx leftpx goes clock wise;
+you can also be specific with the margins by masing margin-left: leftpx -->
+<body>
+    <!-- divs are always rectangles and contols the layout  of section-->
+    <div class = "purplebox">
+            <p class = "large"> This is some text.</p>
+    </div>
+    <div class = "greenbox">
+            <p id = "green" class= "large"> This is some more text </p>
+    </div>  
+    <p> The Third <span class="underline large bold"> word </span> in this paragraph "word"  is underlined large and bold</p>
+</body>
+</html>
